@@ -2,16 +2,16 @@ import torch
 import cv2
 import math
 import matplotlib.pyplot as plt
+def addNoise(img,beta_t):
+    return torch.normal(math.sqrt(1-beta_t)*img,math.sqrt(beta_t))
 def genNoise(img,n):
-    def noise(img,beta_t):
-        return torch.normal(math.sqrt(1-beta_t)*img,math.sqrt(beta_t))
     def f(t):
         s = 0.008
         return math.cos((t/n+s)/(1+s)*math.pi/2)**2
     image_list = [img]
     for t in range(1,n):
         b_t = 1-f(t)/f(0)
-        img = noise(img,b_t)
+        img = addNoise(img,b_t)
         image_list.append(img)
     return image_list
 if __name__ == '__main__':
