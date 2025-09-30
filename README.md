@@ -4,6 +4,14 @@ Presentation link: https://rutgersconnect-my.sharepoint.com/:p:/r/personal/jafar
 
 ## Slide 7:
 
-Simple diffusion model for mnist dataset
+Simple autoencoder model for mnist dataset
 
 dataset from https://www.kaggle.com/datasets/hojjatk/mnist-dataset
+
+Played around with using the model for diffusion, worked as expected (not well)
+
+## Slide 12:
+
+Digit creation using variational autoencoders
+
+Digit is created purely from standard distribution, not a specific digit

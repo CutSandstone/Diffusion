@@ -5,3 +5,4 @@ train-labels-idx1-ubyte/
 image.jpeg
 __pycache__/
 .venv/
+*.pth
